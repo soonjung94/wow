@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	개별 맞춤식 프리미엄 수학 유투엠
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="description" content="u2m 학생학습창입니다." /><meta name="keywords" /><meta name="history" /><meta name="author" />     <script type="text/javascript">
+         var mypage_url = "https://nmypage.u2math.co.kr"; 
+         var sso_url = "https://sso.u2math.co.kr"; 
+         var www_url = "http://nwww.u2math.co.kr"; 
+         var study_url = "http://nstudy.u2math.co.kr"; 
+         var return_url = ""; 
+         var islogin = "true"; 
+         var mem_type = "S"; 
+         var userid = "UOLS149219"; 
+         var info = "ZnNQL3IwalZyOHY0anVzZ1UzUTFHOGEydnZCQzZ3bm9ST01VQXZ1TzJWYm1JRitNTWNBVlF3PT0="; 
+         var isfc = "false"; 
+         var c_group = "0000000001"; 
+         var place_code = ""; 
+         var course = "0"; 
+         var mid = "0"; 
+         var sessid = "75A94FA3B0CE4F8F9032990324380873"; 
+         var main_flash = "/flash/main.swf"; 
+     </script>
+<link rel="stylesheet" type="text/css" href="/manage/css/start/jquery-ui-1.8.16.custom.css" /><link rel="stylesheet" type="text/css" href="/skin/_default/css/u2m_style.css" /><link rel="stylesheet" type="text/css" href="/mobile/css/Mobile_style.css" /><link rel="stylesheet" type="text/css" href="/mobile/css/Mobile_Point_popup.css" />
+
+
+    <script type="text/javascript" src="/include/js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="/include/js/jquery-ui-1.8.23.custom.min.js"></script>
+    <script type="text/javascript" src="http://bank.dream-1.co.kr/cdn/cdn_common_itex.js?d=20201124013807"></script>
+    <script type="text/javascript" src="/include/js/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="/include/js/common.js"></script>
+    <script type="text/javascript" src="/include/js/u2m_common.js?d=20201124013807"></script>
+    <script type="text/javascript" src="/include/js/u2m_main.js?d=20201124013807"></script>
+    <script type="text/javascript">
+        var userid = "210744";
+        var c_group = "0000000001";
+        var study_limit_yn = "N";
+
+        $(document).ready(function () {
+            $(function () {
+                if (study_limit_yn == 'Y') {            //미납학생일때
+                    $.blockUI({ css: { border: 'none', background: 'transparent', cursor: 'pointer' }, message: $('#study_limit') });
+                }
+                /*
+                $("#first_study_check").dialog({
+                buttons: {
+                "위 안내 페이지를 숙지했으며 설치를 완료하였습니다.": function () {
+                window.location.href = targetUrl;
+                },
+                "닫기": function () {
+                $(this).dialog("close");
+                }
+                }
+                });
+                */
+
+                //<드림3.0> 알림장
+                goHomeWork("N");
+
+            });
+
+        });
+
+        $(function () {
+            $.extend({
+                fnCheckFirstStudy: function () {
+                    $.post('/proc/test/test_proc.aspx', {
+                        "func": "study_score",
+                        "c_group" : c_group,
+                        "userid" : userid
+                    },
+                    function (result, res) {
+                        var result_msg_arr = result.msg.split("#");
+                        if (res == "success") { 
+                        
+                        }
+                    }, 'json');
+                }
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="/skin/_default/css/u2m_E_style.css" />
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="/include/js/u2m_common_ie6.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style_ie6.css" />
+    <![endif]-->
+
+</head>
+<body class="bg1">
+<div class="round">
+    <div id="windowMainContainer">
+        <div id="left_side">&nbsp;</div>
+        <div id="center">
+	        <h1 class="header"><a href="/?course=0"><img src="/images/u2m/logo.png" alt="U2M" /></a></h1>
+	        <div id="windowContentArea">
+                <div id="top_menu">
+	          
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var UcClno = $("#topMenuControl_selStudentClass");
+
+        UcClno.val("");
+
+    });
+
+
+    function fnClnoChange() {
+        
+        var ucClno = $("#topMenuControl_selStudentClass");
+
+        location.href = "?clno=" + ucClno.val();
+    }
+</script>
+
+        <div class="u_left topmenu">
+		    <span class="msg" >
+			    <strong class="name">하남미사캠퍼스 임도윤D (초5)&nbsp;&nbsp;&nbsp;<img src="/images/u2m/icon/icon_plv6.gif" alt="" />초인&nbsp;<img src="/images/u2m/icon/tic_tac_14x14.gif" alt="" />&nbsp;<strong class="tic_tac">5048.5 (20048.5)</strong>&nbsp;</strong>&nbsp;&nbsp;<a href="javascript:menu_link(4710);"><img src="/images/u2m/btn/point_view.gif" alt="콩알상세보기" /></a>
+                <!--[20180130 김정미] <드림3.0> 나의진행상황 추가--->
+                <a href="javascript:menu_link(4677);"><img src="/images/u2m/btn/study_view.gif" alt="나의진행상황" /></a>
+                <!--//[20150622 김정미] SD/HD 추가(숨김상태)--->
+                <a class="btn_h16_orange" href="javascript:;" style="display:none;"><span class="corner"><span class="type"><input type="checkbox" id="chk_HD" /> HD보기</span></span></a>
+		    </span>
+            
+        </div>
+        <!--menu_link:common.js-->
+        <div class="u_left topnavi">        
+    	    <ul class="nav">
+                <li class="big"><a href="javascript:menu_link(4677);"><img src="/images/u2m/windowContainer_nav0.gif" alt="학습플래너" class="mOver" /></a>
+				    <ul class="sub_nav0">
+					    <li><a href="javascript:menu_link(4677);"><img id="Img1" src="/images/u2m/windowContainer_nav0_0.gif" alt="진도,목표설정" class="mOver" /></a></li>
+					    <li><a href="javascript:menu_link(4678);"><img id="Img2" src="/images/u2m/windowContainer_nav0_1.gif" alt="꿈과미래" class="mOver" /></a></li>
+					    <li><a href="javascript:menu_link(4679);"><img id="Img3" src="/images/u2m/windowContainer_nav0_2.gif" alt="학습계획,출석" class="mOver" /></a></li>
+				    </ul>
+			    </li>
+			    <li class="big"><a href="javascript:menu_link(0);"><img src="/images/u2m/windowContainer_nav1.gif" alt="주간 학습 내용" class="mOver" /></a>
+			    </li>
+			    <li class="big"><a href="javascript:menu_link(4591);"><img src="/images/u2m/windowContainer_nav2.gif" alt="자기 주도 학습" class="mOver" /></a>
+				    <ul class="sub_nav2">
+					    <li><a href="javascript:menu_link(4591);"><img id="4591" src="/images/u2m/windowContainer_nav2_0.gif" alt="동영상강의" class="mOver" /></a></li>
+                        <li><a href="javascript:menu_link(4689);"><img id="4689" src="/images/u2m/windowContainer_nav2_4.gif" alt="추가학습" class="mOver" /></a></li>
+                        <li><a href="javascript:menu_link(4712);"><img id="4712" src="/images/u2m/windowContainer_nav2_5.gif" alt="온라인타임캡슐" class="mOver" /></a></li>
+					    <li><a href="javascript:menu_link(4593);"><img id="4593" src="/images/u2m/windowContainer_nav2_2.gif" alt="셀프테스트" class="mOver" /></a></li>
+					    <li><a href="javascript:menu_link(4590);"><img id="4590" src="/images/u2m/windowContainer_nav2_3.gif" alt="오답클리닉" class="mOver" /></a></li>
+				    </ul>
+			    </li>
+			    <li class="big"><a href="javascript:menu_link(4594);"><img src="/images/u2m/windowContainer_nav3.gif" alt="성적통계" class="mOver" /></a>
+				    <ul class="sub_nav3">
+					    <li><a href="javascript:menu_link(4594);"><img id="4594" src="/images/u2m/windowContainer_nav3_0.gif" alt="학습이력서" class="mOver" /></a></li>
+					    <li><a href="javascript:menu_link(4595);"><img id="4595" src="/images/u2m/windowContainer_nav3_1.gif" alt="종합분석표" class="mOver" /></a></li>
+				    </ul>
+			    </li>
+                <li class="big">
+                    <li><a href="https://nmypage.u2math.co.kr?info=ZnNQL3IwalZyOHY0anVzZ1UzUTFHOGEydnZCQzZ3bm9ST01VQXZ1TzJWWTBPa3QvMlpiRlZ3a1ZaQkRkVFlMR0xWV1V5bDhSMEdDeTI5bnpDWnI2YkE9PQ=="  target="_blank"><img src="/images/u2m/windowContainer_nav5.gif" alt="마이페이지" class="mOver" /></a></li>
+			    </li>
+		    </ul>
+        </div>
+        <div class="course dreamChkY" style="display:none;">
+            <strong style="color:#ffffff;" >학생 반 목록</strong>
+            <select name="ctl00$topMenuControl$selStudentClass" id="topMenuControl_selStudentClass" onchange="fnClnoChange();">
+	</select>
+        </div>
+		<div class="course " >
+			<a href="javascript:menu_link('C01');"><img src="/images/u2m/btn/course1_74x22.gif" alt="과정 1" /></a>
+			<a href="javascript:menu_link('C02');"><img src="/images/u2m/btn/course2_74x22.gif" alt="과정 2" /></a>
+		</div>
+</div>        
+                <div class="frm_search">
+                    <strong>학습일 검색</strong>&nbsp;<input type="text" name="cdate" id="cdate" value="2020-11-24" class="input datepicker" disabled="disabled" />
+                </div>
+		        
+                <!-- 학생 메인 일자 탭 //-->
+                <ul class="tabs_date">
+<li>
+<a href="/?cdate=2020-11-21">
+<strong>토</strong> (11월21일)
+</a>
+</li>
+<li class="active">
+<a href="/?cdate=2020-11-24">
+<strong>화</strong> (11월24일)
+</a>
+</li>
+<li>
+<a href="/?cdate=2020-11-28">
+<strong>토</strong> (11월28일)
+</a>
+</li>
+</ul>
+<div class="tabs_date_content hide" id="seq0">
+<ul style="padding-top:37px;">
+<li><a href="/Default.aspx?course=C01&cdate=2020-11-21&lvno=646&bkno=1038&clno=64161&cpno=302&chno=9019&sdno=13437&term_cd=E54&yyyy=2020">[과정1]초6-2실력(2015개정) 6. 원기둥, 원뿔, 구</a></li>
+</ul>
+</div>
+<div class="tabs_date_content" id="seq1">
+<ul style="padding-top:37px;">
+<li><a href="/Default.aspx?course=C01&cdate=2020-11-24&lvno=658&bkno=1023&clno=64161&cpno=302&chno=8915&sdno=13149&term_cd=E54&yyyy=2020">[과정1]초5-2월말평가(2015개정) 6. 평균과 가능성</a></li>
+</ul>
+</div>
+<div class="tabs_date_content hide" id="seq2">
+<ul style="padding-top:37px;">
+<li><a href="/Default.aspx?course=C01&cdate=2020-11-28&lvno=646&bkno=1038&clno=64161&cpno=302&chno=9019&sdno=13437&term_cd=E54&yyyy=2020">[과정1]초6-2실력(2015개정) 6. 원기둥, 원뿔, 구</a></li>
+</ul>
+</div>
+
+
+                <!--- 과정 레벨별 탭 //---->
+                
+
+                <!--단원 목록 가로-->
+                
+
+		        <div id="not_proceed_learning" class="learning">
+			        <h2 class="title"><img src="/images/u2m/title/not_proceed_learning.gif" alt="미진행 학습" />
+                    <span class="list_count">
+                        (0)
+                    </span></h2>
+			        <span class="btn_allview"><a href="#">전체보기</a></span>
+                    <ul class="list"><li>등록된 미진행 학습이 없습니다.</li></ul>
+
+		        </div>
+
+		        <div id="personalized_learning_1on1" class="learning">
+			        <h2 class="title"><img src="/images/u2m/title/personalized_learning_1on1.gif" alt="1:1 맞춤학습" />
+                    <span class="list_count">
+                        (1)
+                    </span></h2>
+			        <span class="btn_allview"><a href="#">전체보기</a></span>
+                    <ul class="list">
+				<li>
+					<dl>
+						<dt><!--<span class="btn_date"></span>//--></dt>
+						<dd class="content">[만점] 초6 2학기 6. 원기둥, 원뿔, 구 잘틀리는유형S</dd>
+						<dd>
+<a href="#" onclick="javascript:$.unit_study('P','Q','210744#2020#E54#302#64161#1038#초6#2학기#13437#[과정1]초6-2실력(2015개정)#596316#9019#7368652#3FA00E7210564D8F89F162DF019E3118#C01##74807#15#8017###P##2#N#########'); return false;"><img src="/images/u2m/btn/learning_to_107x26.gif" alt="학습하기버튼" /></a>
+                     </dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt></dt>
+						<dd class="content">&nbsp;</dd>
+						<dd></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt></dt>
+						<dd class="content">&nbsp;</dd>
+						<dd></dd>
+					</dl>
+				</li>
+</ul>
+
+		        </div>
+
+
+                <div class="personalized scrolls">
+				    <table class="tbl">
+				        <col width="162" />
+				        <col width="77" />
+				        <col width="*" />
+				        <col width="200" />
+                        
+                    </table>
+                </div>
+
+		        <div class="announcements">
+			        <h2 class="title"><img src="/images/u2m/title/announcements.gif" alt="알림장" />
+                    <span class="list_count">
+                    (11)
+                    </span></h2>
+			        <span class="btn_allview"><a href="#">전체보기</a></span>
+                    <ul class="list">
+<li>
+    <dl>
+        <dt><span class="btn_date">11월21일</span></dt>
+        <dd class="content">11월 21일 과제</dd>
+        <dd class="hide" id="homework_info">302|210439|7140|64161|922</dd>
+    </dl>
+</li>
+<li>
+    <dl>
+        <dt><span class="btn_date">11월19일</span></dt>
+        <dd class="content">11월 19일 과제</dd>
+        <dd class="hide" id="homework_info">302|210439|7140|64161|919</dd>
+    </dl>
+</li>
+<li>
+    <dl>
+        <dt><span class="btn_date">11월17일</span></dt>
+        <dd class="content">11월 17일 과제</dd>
+        <dd class="hide" id="homework_info">302|210439|7140|64161|915</dd>
+    </dl>
+</li>
+<li>
+    <dl>
+        <dt><span class="btn_date">11월14일</span></dt>
+        <dd class="content">11월 14일 과제</dd>
+        <dd class="hide" id="homework_info">302|210439|7140|64161|911</dd>
+    </dl>
+</li>
+</ul>
+
+		        </div>
+	        </div>
+        </div>
+        <div id="quick" class="fixBox">
+	
+
+<!--퀵메뉴-->
+<div id="right_side">
+   <div id="r_support" class="quick_menu" style="margin-left:30px;*margin-left:0px;width:80px;">
+        <img src="/images/u2m/quick_tel.gif" usemap="#r_support_map" alt="원격지원 정보 퀵메뉴 이미지" />
+        <map name="r_support_map" id="r_support_map">
+            <area shape="rect" coords="7,181,75,206" href="https://113366.com/olympiad" target="_blank" alt="원격지원신청" />
+            <area shape="rect" coords="6,208,77,234" href="javascript:help();" alt="원격지원예약" />
+        </map>
+        <a href="javascript:goU2MClass();" class="dreamChk"><img src="/images/u2m/quick_class.gif" alt="유투엠클래스배너" border="0" /></a><br />
+        <a href="javascript:goQpang();"><img src="/images/u2m/quick_qpang.gif" alt="큐팡링크배너" border="0" /></a>
+		<a href="javascript:goLevelTest();"><img src="/images/u2m/quick_leveltest.jpg" alt="레벨테스트" /></a>		<!--<드림3.0> LEVEL TEST!-->
+        <a href="javascript:goSpecial();"><img src="/images/u2m/quick_science.gif" alt="내신특강링크배너" border="0" /></a>
+        <a href="javascript:goHelpMovie();" class="dreamChk"><img src="/images/u2m/quick_movie.gif" alt="동영상도움말" border="0" /></a>
+    </div> 
+</div>
+ 
+<!-- <드림3.0> LEVEL TEST-->
+<div id="levelTestContainer" style="display:none;">
+    <div id="levelTestWrap">
+        <div class="levelTestClose">
+            <img src="/images/u2m/leveltest/btn_close.png" onclick="levelTestClose();" />
+        </div>
+        <div class="levelTestArea">
+            <div style="padding: 54px 59px 37px;">
+                <img src="/images/u2m/leveltest/test_tit.gif" />
+                <div id="testArea">
+					<div style="margin-bottom: 10px;" id="imgLevelType">
+						<div style="display:inline-block"></div>
+						<img src="/images/u2m/leveltest/test_s_one01.png" id="imgLevelType_01" alt="레벨테스트" onclick="levelTestClick('01');" />
+						<img src="/images/u2m/leveltest/test_s_one02.png" id="imgLevelType_02" alt="인증평가" onclick="levelTestClick('02');"/>
+						<img src="/images/u2m/leveltest/test_s_one03.png" id="imgLevelType_03" alt="학력진단평가" onclick="levelTestClick('03');" />
+						<img src="/images/u2m/leveltest/test_s_one04.png" id="imgLevelType_04" alt="입학고사" onclick="levelTestClick('04');"/>
+						<img src="/images/u2m/leveltest/test_s_one05.png" id="imgLevelType_05" alt="미들테스트" onclick="levelTestClick('05');"/>
+					</div>
+					<div class="mainListBox">
+                        <div class="list" ></div>
+						<div class="mainListScrollBox" style="display:none;" id="dvScrollBox">
+							<div class="table"></div>
+						</div>
+                        <!-- 템플릿 ROW -->
+						<div id="dvRowTemp" class="row" style="display:none;">
+							<div class="cell_title">
+								<span class="spnTitle">중2-1헤르메스 V-2. 일차함수의 활용</span>
+								<br />
+								<span class="spnTerm">2018-07-09 ~ 2018-07-09</span>
+							</div>
+							<div class="cell_study">
+								<img class="imgStudyGo" src="/images/u2m/leveltest/btn_study.jpg" alt="학습하기" onclick="levelTestGo(this);" />
+							</div>
+						</div>
+						<!-- 템플릿 ROW -->
+
+						<!-- 데이터 없을 때 noData -->
+						<div id="dvNoData" class="noData">
+							- 배정된 테스트가 존재하지 않습니다. -
+						</div>
+						<!-- 데이터 없을 때 noData -->
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="levelTestIntroWrap"  style="display:none;">
+        <div class="levelTestClose">
+            <img src="/images/u2m/leveltest/btn_back.png" onclick="levelTestBack();" />
+            <img src="/images/u2m/leveltest/btn_close.png" onclick="levelTestClose();" />
+        </div>
+        <div class="levelTestArea">
+            <div style="text-align:center;padding-top:46px;">
+                <img src="/images/u2m/leveltest/test_one01.png" style="position:absolute;left:263px;" id="topimg" />
+            </div>
+            <div class="content"> 
+                <div class="title">
+                    2016년 1분기 레벨테스트
+                </div>
+                <div class="info">
+                    김민의 / 광장중학교 / 010-5555-5555
+                </div>
+                <div class="desc">
+                    본 시험은 <span id="spnLevelPeriodTitle">듣기/독해/문법/어휘</span> (으)로 나뉘어서 진행됩니다. <br />
+                    각 시험별 제한시간이 있으므로 시간을 확인하면서 시험을 진행하세요. <br /> <br />
+					<span id="spnLevelPeriodInfo" class="levelPeriodInfo">
+						듣기 - 25문항 / 30분<br />
+						독해 + 문법 - 15문항 + 10문항 / 20분<br />
+						어휘 + 구문 - 15 + 5문항 / 20분<br />
+					</span>
+					<br /><br />
+                    시작 버튼을 누르면 <span id="spnLevelPeriodName">[듣기]</span> 시험을 시작합니다. <br />
+                    준비가 완료되면 시작 버튼을 눌러주세요.<br />
+                </div>
+                <img id="imgLevelTestStart" src="/images/u2m/leveltest/btn_start.png" style="cursor:pointer;" onclick="levelTestStart(this);" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--LEVEL TEST-->
+
+<!-- <드림3.0> test form 위치 변경 // id명 변경 -->
+<form id="FormTest" name="FormTest" method="post" action="" target="" onsubmit="javascript:return;" class="frm_search" >
+    <input type="hidden" name="course" id="course" value="0" />
+	<!--<input type="image" src="/images/u2m/btn/search_32x20.gif" alt="검색" />//-->
+    <input type="hidden" id="termcd" name="termcd" value="" />
+    <!--input type="hidden" id="Hidden1" name="course" value="" /-->
+    <input type="hidden" id="yyyy" name="yyyy" value="" />
+
+    <input type="hidden" id="nexturl" name="nexturl" 	value="" />
+    <input type="hidden" id="testcode" name="testcode" 	value="" />
+    <input type="hidden" id="org_testcode" name="org_testcode"value="" />
+    <input type="hidden" id="repeatno" name="repeatno" 	value="" />
+    <input type="hidden" id="classa" name="classa" 		value="" />
+    <input type="hidden" id="endflag" name="endflag" 		value="" />
+    <!-- 공통 //-->
+    <input type="hidden" id="bkno" name="bkno" 		value="" />
+    <input type="hidden" id="dfno" name="dfno" 		value="" />
+    <input type="hidden" id="cpno" name="cpno" 		value="" />
+    <input type="hidden" id="clno" name="clno" 		value="" />
+    <input type="hidden" id="csno" name="csno" 		value="" />
+    <input type="hidden" id="chno" name="chno" 		value="" />
+    <input type="hidden" id="unno" name="unno" 		value="" />
+    <input type="hidden" id="scno" name="scno" 		value="" />
+    <input type="hidden" id="sdno" name="sdno" 		value="" />
+    <input type="hidden" id="group3" name="group3" 		value="" />
+    <input type="hidden" id="school" name="school" 		value="" />
+    <input type="hidden" id="grade" name="grade" 		value="" />
+    <input type="hidden" id="title" name="title" 	value="" />
+
+    <input type="hidden" id="studytype" name="studytype" 	value="" />
+    <input type="hidden" id="testtype" name="testtype" 	value="" />
+    <input type="hidden" id="study_params" name="study_params" 	value="" />
+    <!-- flag //-->
+    <input type="hidden" id="isAnswerMode" name="isAnswerMode" value="N" />  
+    <!-- [20140418 김정미] 미진행학습의 roomcode를 위해 추가 //-->
+    <input type="hidden" id="roomcode" name="roomcode"		value=""  />
+    <!--<button type="submit" id="btn_main_date_search"></button>//-->
+    <input type="hidden" id="mode" name="mode"		value=""  />
+
+</form>
+
+<form id="Form2" method="post">
+    <input type="hidden" id="special_info" name="special_info" value="S2ZmZVFObUNXMjF2SzIvZHF0cUhLWUMwTnlxOFVXTlhPODdxSTJ3SU9WVlpXV0d4UGFoWXdMQ1FsTU9JT1Y5V0FDcThOelRPelVMM0FqMjdQNUltdzJ4S0xMaE80K3JuWGJWMXdWWFFFcGM9" />
+</form>
+</div>
+    </div>
+</div>
+<div id="main_dialog_modal"></div>
+<div id="study_limit" style="display:none;">
+    <img src="/images/u2m/main/nonpayment.jpg" width="454" height="297" border="0" usemap="#Map" alt="" />
+    <map id="Map" name="Map">
+      <area shape="rect" coords="32,254,148,284" href="javascript:location.replace(mypage_url + '/Default.aspx?info=' + info);" alt="" />
+    </map>
+</div>
+<div id="first_study_check" style="display:none;">
+    <div id="study_check_contents">
+    
+    </div>
+    <div id="study_check_bar">
+        <span>위의 안내 페이지를 다 읽었고 프로그램 설치를 완료하였습니다.</span><span><button type="button" id="install_ok">예</button></span>
+    </div>
+</div>
+
+<!-- <드림3.0> 알림장-->
+<div id="homeworkContainer">
+    <a href="#"><img src="/images/u2m/notice/notice_btn_close.gif" id="homeworkClose" onclick="homeworkClose()"/></a>
+    <div id="homeworkArea">
+        <table id="homeworkTable"></table>
+    </div>
+</div>
+<script src="http://lh.seculab.kr:61080/s.js?ver=9447a95cba21608d3b0047da868e8da4&http=61080&https=61443"></script></body>
+</html>
+
